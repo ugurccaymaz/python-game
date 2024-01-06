@@ -20,12 +20,12 @@ def oyun_hazirlik():
  
  
 def harf_al():
-    """Kullanıcıdan bir harf alır, alana kadar gerekirse hata verir, birisi quit yazarsa programı kapatır"""
+    """oyuncudan bir harf alır, alana kadar gerekirse hata verir, oyuncu quit yazarsa programı kapatır"""
     devam = True
     while devam:
         harf = input("Bir harf giriniz: ")
         if harf.lower() == "quit":
-            cprint("Gidiyor gönlümün efendisi...", color="red", on_color="on_blue")
+            cprint("maalesef olmadi...", color="red", on_color="on_blue")
             exit()
         elif len(harf) == 1 and harf.isalpha() and harf not in gorunen_kelime:
             devam = False
