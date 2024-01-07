@@ -37,7 +37,7 @@ def harf_al():
  
  
 def oyun_dongusu():
-    """Oyunun ana döngüsü, harf alır, tutarsa görünen karakterler listesi güncellenir,
+    """Oyunun genel isleyisi, harf alır, tutarsa görünen karakterler listesi güncellenir,
      tutmazsa can azaltılır, ve bu can bitene kadar ya da kelime bilinene kadar devam eder..."""
     global gorunen_kelime, can
     while can > 0 and secilen_kelime != "".join(gorunen_kelime):
@@ -54,7 +54,7 @@ def oyun_dongusu():
  
  
 def harf_kontrol(girilen_harf):
-    """Gelen harfin seçilen kelimede nerelerde olduğunu bulur"""
+    """yazilan harfin seçilen kelimede nerelerde olduğunu bulur"""
     poz = []
     for index, h in enumerate(secilen_kelime):
         if h == girilen_harf:
