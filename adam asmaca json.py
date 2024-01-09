@@ -54,7 +54,7 @@ def oyun_dongusu():
  
  
 def harf_kontrol(girilen_harf):
-    """yazilan harfin seçilen kelimede nerelerde olduğunu bulur"""
+    """yazilan harfin seçilen kelimede olup olmadigini ve nerelerde olduğunu bulur"""
     poz = []
     for index, h in enumerate(secilen_kelime):
         if h == girilen_harf:
@@ -73,7 +73,7 @@ def skor_tablosunu_goster():
  
  
 def skor_tablosunu_guncelle():
-    """Skor tablosunu son kullanıcının ismiyle ve skoruyla günceller"""
+    """Skor tablosunu son kullanıcının ismiyle ve skoruyla güncellemeye yarar"""
     veri = ayar_oku()
     veri["skorlar"].append((can, veri["son_kullanan"]))
     veri["skorlar"].sort(key=lambda skor_tuplei: skor_tuplei[0], reverse=True)
@@ -144,7 +144,7 @@ def main():
     """Programın ana döngüsü, oyunun çalışmasından yükümlü"""
     tekrar_edecek_mi = True
     dosyay_kontrol_et_yoksa_olustur()
-    cprint("Merhaba, Adam Asmacaya hoşgeldiniz.", color="cyan", on_color="on_magenta", attrs=["bold"])
+    cprint("Merhaba, Adam Asmaca oyununa hoşgeldiniz.", color="cyan", on_color="on_magenta", attrs=["bold"])
     cprint("Yardım: Oyun sırasında quit diyerek çıkabilirsiniz", color="cyan", on_color="on_magenta", attrs=["bold"])
     cprint("-"*30, color="cyan", on_color="on_magenta", attrs=["bold"])
     skor_tablosunu_goster()
@@ -155,6 +155,6 @@ def main():
         oyun_sonucu()
         if input("Devam?(e/h) ").lower() == "h":
             tekrar_edecek_mi = False
-    cprint("Gidiyor gönlümün efendisi...", color="red", on_color="on_blue")
+    cprint("maalesef basaramadin...", color="red", on_color="on_blue")
   
 main()
